@@ -1,0 +1,614 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00    10842     0.00     0.00  OBJGetToken
+  0.00      0.00     0.00     1804     0.00     0.00  ReadOneFace
+  0.00      0.00     0.00      906     0.00     0.00  ReadOneVertex
+  0.00      0.00     0.00      906     0.00     0.00  SkipToCRLF
+  0.00      0.00     0.00       10     0.00     0.00  glutGet
+  0.00      0.00     0.00        8     0.00     0.00  checktimers
+  0.00      0.00     0.00        8     0.00     0.00  printError
+  0.00      0.00     0.00        5     0.00     0.00  readFile
+  0.00      0.00     0.00        2     0.00     0.00  ParseOBJ
+  0.00      0.00     0.00        2     0.00     0.00  display
+  0.00      0.00     0.00        2     0.00     0.00  glutSwapBuffers
+  0.00      0.00     0.00        2     0.00     0.00  printShaderInfoLog
+  0.00      0.00     0.00        1     0.00     0.00  DecomposeToTriangles
+  0.00      0.00     0.00        1     0.00     0.00  LoadModel
+  0.00      0.00     0.00        1     0.00     0.00  LoadOBJ
+  0.00      0.00     0.00        1     0.00     0.00  compileShaders
+  0.00      0.00     0.00        1     0.00     0.00  dumpInfo
+  0.00      0.00     0.00        1     0.00     0.00  generateModel
+  0.00      0.00     0.00        1     0.00     0.00  generateNormals
+  0.00      0.00     0.00        1     0.00     0.00  glutCreateWindow
+  0.00      0.00     0.00        1     0.00     0.00  glutDisplayFunc
+  0.00      0.00     0.00        1     0.00     0.00  glutInit
+  0.00      0.00     0.00        1     0.00     0.00  glutInitContextVersion
+  0.00      0.00     0.00        1     0.00     0.00  glutInitDisplayMode
+  0.00      0.00     0.00        1     0.00     0.00  glutMainLoop
+  0.00      0.00     0.00        1     0.00     0.00  glutTimerFunc
+  0.00      0.00     0.00        1     0.00     0.00  init
+  0.00      0.00     0.00        1     0.00     0.00  loadShaders
+  0.00      0.00     0.00        1     0.00     0.00  loadShadersGT
+  0.00      0.00     0.00        1     0.00     0.00  make_window
+  0.00      0.00     0.00        1     0.00     0.00  printProgramInfoLog
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    2712/10842       ParseOBJ [9]
+                0.00    0.00    2718/10842       ReadOneVertex [3]
+                0.00    0.00    5412/10842       ReadOneFace [2]
+[1]      0.0    0.00    0.00   10842         OBJGetToken [1]
+-----------------------------------------------
+                0.00    0.00    1804/1804        ParseOBJ [9]
+[2]      0.0    0.00    0.00    1804         ReadOneFace [2]
+                0.00    0.00    5412/10842       OBJGetToken [1]
+-----------------------------------------------
+                0.00    0.00     906/906         ParseOBJ [9]
+[3]      0.0    0.00    0.00     906         ReadOneVertex [3]
+                0.00    0.00    2718/10842       OBJGetToken [1]
+                0.00    0.00     906/906         SkipToCRLF [4]
+-----------------------------------------------
+                0.00    0.00     906/906         ReadOneVertex [3]
+[4]      0.0    0.00    0.00     906         SkipToCRLF [4]
+-----------------------------------------------
+                0.00    0.00       1/10          main [117]
+                0.00    0.00       1/10          glutTimerFunc [26]
+                0.00    0.00       8/10          checktimers [6]
+[5]      0.0    0.00    0.00      10         glutGet [5]
+-----------------------------------------------
+                0.00    0.00       8/8           glutMainLoop [25]
+[6]      0.0    0.00    0.00       8         checktimers [6]
+                0.00    0.00       8/10          glutGet [5]
+-----------------------------------------------
+                0.00    0.00       1/8           dumpInfo [17]
+                0.00    0.00       3/8           init [27]
+                0.00    0.00       4/8           display [10]
+[7]      0.0    0.00    0.00       8         printError [7]
+-----------------------------------------------
+                0.00    0.00       5/5           loadShadersGT [29]
+[8]      0.0    0.00    0.00       5         readFile [8]
+-----------------------------------------------
+                0.00    0.00       2/2           LoadOBJ [15]
+[9]      0.0    0.00    0.00       2         ParseOBJ [9]
+                0.00    0.00    2712/10842       OBJGetToken [1]
+                0.00    0.00    1804/1804        ReadOneFace [2]
+                0.00    0.00     906/906         ReadOneVertex [3]
+-----------------------------------------------
+                0.00    0.00       2/2           glutMainLoop [25]
+[10]     0.0    0.00    0.00       2         display [10]
+                0.00    0.00       4/8           printError [7]
+                0.00    0.00       2/2           glutSwapBuffers [11]
+-----------------------------------------------
+                0.00    0.00       2/2           display [10]
+[11]     0.0    0.00    0.00       2         glutSwapBuffers [11]
+-----------------------------------------------
+                0.00    0.00       2/2           compileShaders [16]
+[12]     0.0    0.00    0.00       2         printShaderInfoLog [12]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [14]
+[13]     0.0    0.00    0.00       1         DecomposeToTriangles [13]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[14]     0.0    0.00    0.00       1         LoadModel [14]
+                0.00    0.00       1/1           LoadOBJ [15]
+                0.00    0.00       1/1           generateNormals [19]
+                0.00    0.00       1/1           DecomposeToTriangles [13]
+                0.00    0.00       1/1           generateModel [18]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [14]
+[15]     0.0    0.00    0.00       1         LoadOBJ [15]
+                0.00    0.00       2/2           ParseOBJ [9]
+-----------------------------------------------
+                0.00    0.00       1/1           loadShadersGT [29]
+[16]     0.0    0.00    0.00       1         compileShaders [16]
+                0.00    0.00       2/2           printShaderInfoLog [12]
+                0.00    0.00       1/1           printProgramInfoLog [31]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[17]     0.0    0.00    0.00       1         dumpInfo [17]
+                0.00    0.00       1/8           printError [7]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [14]
+[18]     0.0    0.00    0.00       1         generateModel [18]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [14]
+[19]     0.0    0.00    0.00       1         generateNormals [19]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[20]     0.0    0.00    0.00       1         glutCreateWindow [20]
+                0.00    0.00       1/1           make_window [30]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[21]     0.0    0.00    0.00       1         glutDisplayFunc [21]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[22]     0.0    0.00    0.00       1         glutInit [22]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[23]     0.0    0.00    0.00       1         glutInitContextVersion [23]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[24]     0.0    0.00    0.00       1         glutInitDisplayMode [24]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[25]     0.0    0.00    0.00       1         glutMainLoop [25]
+                0.00    0.00       8/8           checktimers [6]
+                0.00    0.00       2/2           display [10]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[26]     0.0    0.00    0.00       1         glutTimerFunc [26]
+                0.00    0.00       1/10          glutGet [5]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[27]     0.0    0.00    0.00       1         init [27]
+                0.00    0.00       3/8           printError [7]
+                0.00    0.00       1/1           LoadModel [14]
+                0.00    0.00       1/1           dumpInfo [17]
+                0.00    0.00       1/1           loadShaders [28]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[28]     0.0    0.00    0.00       1         loadShaders [28]
+                0.00    0.00       1/1           loadShadersGT [29]
+-----------------------------------------------
+                0.00    0.00       1/1           loadShaders [28]
+[29]     0.0    0.00    0.00       1         loadShadersGT [29]
+                0.00    0.00       5/5           readFile [8]
+                0.00    0.00       1/1           compileShaders [16]
+-----------------------------------------------
+                0.00    0.00       1/1           glutCreateWindow [20]
+[30]     0.0    0.00    0.00       1         make_window [30]
+-----------------------------------------------
+                0.00    0.00       1/1           compileShaders [16]
+[31]     0.0    0.00    0.00       1         printProgramInfoLog [31]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [13] DecomposeToTriangles   [17] dumpInfo               [26] glutTimerFunc
+  [14] LoadModel              [18] generateModel          [27] init
+  [15] LoadOBJ                [19] generateNormals        [28] loadShaders
+   [1] OBJGetToken            [20] glutCreateWindow       [29] loadShadersGT
+   [9] ParseOBJ               [21] glutDisplayFunc        [30] make_window
+   [2] ReadOneFace             [5] glutGet                 [7] printError
+   [3] ReadOneVertex          [22] glutInit               [31] printProgramInfoLog
+   [4] SkipToCRLF             [23] glutInitContextVersion [12] printShaderInfoLog
+   [6] checktimers            [24] glutInitDisplayMode     [8] readFile
+  [16] compileShaders         [25] glutMainLoop
+  [10] display                [11] glutSwapBuffers
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00    10842     0.00     0.00  OBJGetToken
+  0.00      0.00     0.00     1804     0.00     0.00  ReadOneFace
+  0.00      0.00     0.00      906     0.00     0.00  ReadOneVertex
+  0.00      0.00     0.00      906     0.00     0.00  SkipToCRLF
+  0.00      0.00     0.00       22     0.00     0.00  glutGet
+  0.00      0.00     0.00       20     0.00     0.00  checktimers
+  0.00      0.00     0.00        6     0.00     0.00  printError
+  0.00      0.00     0.00        5     0.00     0.00  readFile
+  0.00      0.00     0.00        2     0.00     0.00  ParseOBJ
+  0.00      0.00     0.00        2     0.00     0.00  printShaderInfoLog
+  0.00      0.00     0.00        1     0.00     0.00  DecomposeToTriangles
+  0.00      0.00     0.00        1     0.00     0.00  LoadModel
+  0.00      0.00     0.00        1     0.00     0.00  LoadOBJ
+  0.00      0.00     0.00        1     0.00     0.00  compileShaders
+  0.00      0.00     0.00        1     0.00     0.00  display
+  0.00      0.00     0.00        1     0.00     0.00  dumpInfo
+  0.00      0.00     0.00        1     0.00     0.00  generateModel
+  0.00      0.00     0.00        1     0.00     0.00  generateNormals
+  0.00      0.00     0.00        1     0.00     0.00  glutCreateWindow
+  0.00      0.00     0.00        1     0.00     0.00  glutDisplayFunc
+  0.00      0.00     0.00        1     0.00     0.00  glutInit
+  0.00      0.00     0.00        1     0.00     0.00  glutInitContextVersion
+  0.00      0.00     0.00        1     0.00     0.00  glutInitDisplayMode
+  0.00      0.00     0.00        1     0.00     0.00  glutMainLoop
+  0.00      0.00     0.00        1     0.00     0.00  glutSwapBuffers
+  0.00      0.00     0.00        1     0.00     0.00  glutTimerFunc
+  0.00      0.00     0.00        1     0.00     0.00  init
+  0.00      0.00     0.00        1     0.00     0.00  loadShaders
+  0.00      0.00     0.00        1     0.00     0.00  loadShadersGT
+  0.00      0.00     0.00        1     0.00     0.00  make_window
+  0.00      0.00     0.00        1     0.00     0.00  printProgramInfoLog
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    2712/10842       ParseOBJ [9]
+                0.00    0.00    2718/10842       ReadOneVertex [3]
+                0.00    0.00    5412/10842       ReadOneFace [2]
+[1]      0.0    0.00    0.00   10842         OBJGetToken [1]
+-----------------------------------------------
+                0.00    0.00    1804/1804        ParseOBJ [9]
+[2]      0.0    0.00    0.00    1804         ReadOneFace [2]
+                0.00    0.00    5412/10842       OBJGetToken [1]
+-----------------------------------------------
+                0.00    0.00     906/906         ParseOBJ [9]
+[3]      0.0    0.00    0.00     906         ReadOneVertex [3]
+                0.00    0.00    2718/10842       OBJGetToken [1]
+                0.00    0.00     906/906         SkipToCRLF [4]
+-----------------------------------------------
+                0.00    0.00     906/906         ReadOneVertex [3]
+[4]      0.0    0.00    0.00     906         SkipToCRLF [4]
+-----------------------------------------------
+                0.00    0.00       1/22          main [117]
+                0.00    0.00       1/22          glutTimerFunc [26]
+                0.00    0.00      20/22          checktimers [6]
+[5]      0.0    0.00    0.00      22         glutGet [5]
+-----------------------------------------------
+                0.00    0.00      20/20          glutMainLoop [24]
+[6]      0.0    0.00    0.00      20         checktimers [6]
+                0.00    0.00      20/22          glutGet [5]
+-----------------------------------------------
+                0.00    0.00       1/6           dumpInfo [16]
+                0.00    0.00       2/6           display [15]
+                0.00    0.00       3/6           init [27]
+[7]      0.0    0.00    0.00       6         printError [7]
+-----------------------------------------------
+                0.00    0.00       5/5           loadShadersGT [29]
+[8]      0.0    0.00    0.00       5         readFile [8]
+-----------------------------------------------
+                0.00    0.00       2/2           LoadOBJ [13]
+[9]      0.0    0.00    0.00       2         ParseOBJ [9]
+                0.00    0.00    2712/10842       OBJGetToken [1]
+                0.00    0.00    1804/1804        ReadOneFace [2]
+                0.00    0.00     906/906         ReadOneVertex [3]
+-----------------------------------------------
+                0.00    0.00       2/2           compileShaders [14]
+[10]     0.0    0.00    0.00       2         printShaderInfoLog [10]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [12]
+[11]     0.0    0.00    0.00       1         DecomposeToTriangles [11]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[12]     0.0    0.00    0.00       1         LoadModel [12]
+                0.00    0.00       1/1           LoadOBJ [13]
+                0.00    0.00       1/1           generateNormals [18]
+                0.00    0.00       1/1           DecomposeToTriangles [11]
+                0.00    0.00       1/1           generateModel [17]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [12]
+[13]     0.0    0.00    0.00       1         LoadOBJ [13]
+                0.00    0.00       2/2           ParseOBJ [9]
+-----------------------------------------------
+                0.00    0.00       1/1           loadShadersGT [29]
+[14]     0.0    0.00    0.00       1         compileShaders [14]
+                0.00    0.00       2/2           printShaderInfoLog [10]
+                0.00    0.00       1/1           printProgramInfoLog [31]
+-----------------------------------------------
+                0.00    0.00       1/1           glutMainLoop [24]
+[15]     0.0    0.00    0.00       1         display [15]
+                0.00    0.00       2/6           printError [7]
+                0.00    0.00       1/1           glutSwapBuffers [25]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[16]     0.0    0.00    0.00       1         dumpInfo [16]
+                0.00    0.00       1/6           printError [7]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [12]
+[17]     0.0    0.00    0.00       1         generateModel [17]
+-----------------------------------------------
+                0.00    0.00       1/1           LoadModel [12]
+[18]     0.0    0.00    0.00       1         generateNormals [18]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[19]     0.0    0.00    0.00       1         glutCreateWindow [19]
+                0.00    0.00       1/1           make_window [30]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[20]     0.0    0.00    0.00       1         glutDisplayFunc [20]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[21]     0.0    0.00    0.00       1         glutInit [21]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[22]     0.0    0.00    0.00       1         glutInitContextVersion [22]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[23]     0.0    0.00    0.00       1         glutInitDisplayMode [23]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[24]     0.0    0.00    0.00       1         glutMainLoop [24]
+                0.00    0.00      20/20          checktimers [6]
+                0.00    0.00       1/1           display [15]
+-----------------------------------------------
+                0.00    0.00       1/1           display [15]
+[25]     0.0    0.00    0.00       1         glutSwapBuffers [25]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[26]     0.0    0.00    0.00       1         glutTimerFunc [26]
+                0.00    0.00       1/22          glutGet [5]
+-----------------------------------------------
+                0.00    0.00       1/1           main [117]
+[27]     0.0    0.00    0.00       1         init [27]
+                0.00    0.00       3/6           printError [7]
+                0.00    0.00       1/1           LoadModel [12]
+                0.00    0.00       1/1           dumpInfo [16]
+                0.00    0.00       1/1           loadShaders [28]
+-----------------------------------------------
+                0.00    0.00       1/1           init [27]
+[28]     0.0    0.00    0.00       1         loadShaders [28]
+                0.00    0.00       1/1           loadShadersGT [29]
+-----------------------------------------------
+                0.00    0.00       1/1           loadShaders [28]
+[29]     0.0    0.00    0.00       1         loadShadersGT [29]
+                0.00    0.00       5/5           readFile [8]
+                0.00    0.00       1/1           compileShaders [14]
+-----------------------------------------------
+                0.00    0.00       1/1           glutCreateWindow [19]
+[30]     0.0    0.00    0.00       1         make_window [30]
+-----------------------------------------------
+                0.00    0.00       1/1           compileShaders [14]
+[31]     0.0    0.00    0.00       1         printProgramInfoLog [31]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [11] DecomposeToTriangles   [16] dumpInfo               [26] glutTimerFunc
+  [12] LoadModel              [17] generateModel          [27] init
+  [13] LoadOBJ                [18] generateNormals        [28] loadShaders
+   [1] OBJGetToken            [19] glutCreateWindow       [29] loadShadersGT
+   [9] ParseOBJ               [20] glutDisplayFunc        [30] make_window
+   [2] ReadOneFace             [5] glutGet                 [7] printError
+   [3] ReadOneVertex          [21] glutInit               [31] printProgramInfoLog
+   [4] SkipToCRLF             [22] glutInitContextVersion [10] printShaderInfoLog
+   [6] checktimers            [23] glutInitDisplayMode     [8] readFile
+  [14] compileShaders         [24] glutMainLoop
+  [15] display                [25] glutSwapBuffers
